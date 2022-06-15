@@ -1,5 +1,6 @@
 import "./App.css";
 import Button from "./components/Button";
+import Counter from "./Counter";
 
 export default function App() {
   const showAlert = () => {
@@ -7,7 +8,7 @@ export default function App() {
   };
 
   const showAlert_m = (props) => {
-    alert("you have clicked {props.name}");
+    alert("you have clicked" + JSON.stringify(props.children));
   };
   return (
     <div className="App">
@@ -27,6 +28,8 @@ export default function App() {
         {" "}
         button-3
       </Button>
+      <br />
+      <Counter />
     </div>
   );
 }
