@@ -1,4 +1,5 @@
 import "./App.css";
+import ArrayToList from "./ArrayToList";
 import Button from "./components/Button";
 import Counter from "./Counter";
 
@@ -30,6 +31,11 @@ export default function App() {
       </Button>
       <br />
       <Counter />
+
+      <div>
+        <h1> Array To List in React</h1>
+        <ArrayToList />
+      </div>
     </div>
   );
 }
