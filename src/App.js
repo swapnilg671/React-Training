@@ -1,12 +1,14 @@
+import React from "react";
 import "./App.css";
 import ArrayToList from "./ArrayToList";
 import Button from "./components/Button";
 import Counter from "./Counter";
+import UForm from "./userForm";
 import IList from "./components/IList";
 import Data1 from "./Resources/Data1";
 import Data2 from "./Resources/Data2";
 import Users from "./Resources/Users.json";
-import userForm from "./userForm";
+import ProgrammerJokes from "./ProgrammerJokes";
 
 export default function App() {
   const showAlert = () => {
@@ -31,16 +33,13 @@ export default function App() {
         </Button>
         <Button onClick={showAlert_m}>button-2</Button>
         <Button onClick={showAlert_m} name="button-3">
-          {" "}
-          button-3
+          {"button-3 "}
         </Button>
         <br />
       </div>
 
       <Counter />
-      <div className="uForm">
-        <userForm />
-      </div>
+
       <div className="ArrayToList">
         <h1> Array To List in React</h1>
         <ArrayToList />
@@ -48,14 +47,22 @@ export default function App() {
       <hr />
       <div className="custom-list">
         <h1> List of Animals</h1>
-        <button onClick={() => console.log(Data1.size)}>Test</button>
+        <button onClick={() => console.log(Data1[1].size)}>Test</button>
         <IList title="wild Animals" name={Users.firstName} size={Data1.size}>
-          {"1- "}
+          {"list 1- "}
         </IList>
         <br />
         <IList title="pet animals" name={Data2.name} size={Data2.size}>
-          {"2-"}
+          {"list 2-"}
         </IList>
+      </div>
+
+      <div className="userForm">
+        <UForm />
+      </div>
+      <hr />
+      <div>
+        <ProgrammerJokes />
       </div>
     </div>
   );
