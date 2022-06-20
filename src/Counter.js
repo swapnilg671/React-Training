@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 function Counter() {
   const [counting, setCounting] = useState(1);
-  add = () => {
+  const add = () => {
     setCounting(counting + 1);
   };
-  sub = () => {
+  const sub = () => {
     setCounting(counting - 1);
   };
 
