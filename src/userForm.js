@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 function UForm(prop) {
+  const [inputValue, setInputValue] = useState("");
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
   const handleSubmit = (event) => {
     alert("A name was submitted: " + { inputValue });
     event.preventDefault();
     // ???
-  };
-  const [inputValue, setInputValue] = useState("");
-  const handleChange = (event) => {
-    setInputValue(event.target.value);
   };
   return (
     <div>
@@ -27,6 +27,7 @@ function UForm(prop) {
         </label>
 
         <button>save</button>
+        <button onClick={() => console.log({ inputValue })}>test</button>
       </form>
     </div>
   );

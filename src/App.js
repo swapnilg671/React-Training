@@ -9,6 +9,7 @@ import Data1 from "./Resources/Data1";
 import Data2 from "./Resources/Data2";
 import Users from "./Resources/Users.json";
 import ProgrammerJokes from "./ProgrammerJokes";
+import RandomRobo from "./RandomRobo";
 
 export default function App() {
   const showAlert = () => {
@@ -63,6 +64,9 @@ export default function App() {
       <hr />
       <div>
         <ProgrammerJokes />
+      </div>
+      <div>
+        <RandomRobo />
       </div>
     </div>
   );
