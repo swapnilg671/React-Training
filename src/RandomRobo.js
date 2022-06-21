@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./RandomRobo.css";
 
 function RandomRobo() {
   const [data, setData] = useState(null);
@@ -54,15 +55,24 @@ function RandomRobo() {
       )}
       <ul>
         {data &&
-          data.map(({ id, avatar, first_name }) => (
-            <div className="robocard">
-              <li key={id}>
-                <div>
-                  <img alt={first_name} src={avatar} />
+          data.map(({ id, avatar, first_name, last_name, email }) => (
+            <li key={id}>
+              <div className="robofCard">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img alt={first_name} src={avatar} />
+                    <h3 className="Rname">
+                      {first_name}
+                      {last_name}
+                    </h3>
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>more information</h1>
+                    <div>{email}</div>
+                  </div>
                 </div>
-                <h3>{first_name}</h3>
-              </li>
-            </div>
+              </div>
+            </li>
           ))}
       </ul>
       {console.log("api")}

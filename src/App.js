@@ -10,6 +10,7 @@ import Data2 from "./Resources/Data2";
 import Users from "./Resources/Users.json";
 import ProgrammerJokes from "./ProgrammerJokes";
 import RandomRobo from "./RandomRobo";
+import SearchRobo from "./SearchRobo";
 
 export default function App() {
   const showAlert = () => {
@@ -67,6 +68,7 @@ export default function App() {
       </div>
       <div>
         <RandomRobo />
+        <SearchRobo />
       </div>
     </div>
   );
