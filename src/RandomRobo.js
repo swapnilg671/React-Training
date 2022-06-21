@@ -58,15 +58,15 @@ function RandomRobo() {
           data.map(({ id, avatar, first_name, last_name, email }) => (
             <li key={id}>
               <div className="robofCard">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
                     <img alt={first_name} src={avatar} />
                     <h3 className="Rname">
                       {first_name}
                       {last_name}
                     </h3>
                   </div>
-                  <div class="flip-card-back">
+                  <div className="flip-card-back">
                     <h1>more information</h1>
                     <div>{email}</div>
                   </div>

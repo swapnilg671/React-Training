@@ -22,8 +22,10 @@ export default function App() {
   };
   return (
     <div className="App">
+      <SearchRobo />
       <h1>Hello React</h1>
       <h2>Hello World!</h2>
+
       <button className="button-1" onClick={showAlert}>
         {" "}
         Alert{" "}
@@ -68,7 +70,6 @@ export default function App() {
       </div>
       <div>
         <RandomRobo />
-        <SearchRobo />
       </div>
     </div>
   );
