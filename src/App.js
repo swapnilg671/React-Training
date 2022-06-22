@@ -10,7 +10,7 @@ import Data2 from "./Resources/Data2";
 import Users from "./Resources/Users.json";
 import ProgrammerJokes from "./ProgrammerJokes";
 import RandomRobo from "./RandomRobo";
-import SearchRobo from "./SearchRobo";
+import SearchRobo2 from "./SearchRobo2";
 
 export default function App() {
   const showAlert = () => {
@@ -22,7 +22,7 @@ export default function App() {
   };
   return (
     <div className="App">
-      <SearchRobo />
+      <SearchRobo2 />
       <h1>Hello React</h1>
       <h2>Hello World!</h2>
 
