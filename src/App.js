@@ -11,29 +11,32 @@ import Users from "./Resources/Users.json";
 import ProgrammerJokes from "./ProgrammerJokes";
 import RandomRobo from "./RandomRobo";
 import SearchRobo2 from "./SearchRobo2";
+import Accordian from "./Accodian";
 
 export default function App() {
   const showAlert = () => {
     alert("You have clicked button");
   };
 
-  const showAlert_m = (props) => {
-    alert("you have clicked" + JSON.stringify(props.children));
+  const showAlert_m = (num) => {
+    alert(`you have clicked + ${num} ` );
   };
   return (
     <div className="App">
-      <SearchRobo2 />
+     
       <h1>Hello React</h1>
       <h2>Hello World!</h2>
+      <Accordian/>
+      <SearchRobo2 />
 
       <button className="button-1" onClick={showAlert}>
         {" "}
         Alert{" "}
       </button>
       <div className="cButton">
-        <Button onClick={showAlert_m} name="button-1">
-          {" "}
-          button-1
+        <Button onClick={()=>showAlert_m("button-1")} name="button-1">
+          {"button-1"}
+       
         </Button>
         <Button onClick={showAlert_m}>button-2</Button>
         <Button onClick={showAlert_m} name="button-3">

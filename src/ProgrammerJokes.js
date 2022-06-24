@@ -5,14 +5,14 @@ function ProgrammerJokes() {
     return (
       <div className="jokesCard" key={joke.id}>
         <h1>{joke.setup}</h1>
-        <div>{joke.punchline}</div>
+        <p>{joke.punchline}</p>
       </div>
     );
   });
   return (
     <div>
       {/* <button onClick={()=>console.log({pJokes})}>fetch jokes</button> */}
-      <div>{pJokes}</div>
+      <div className="jokesDisplay">{pJokes}</div>
     </div>
   );
 }
