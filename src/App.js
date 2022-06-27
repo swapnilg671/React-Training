@@ -11,22 +11,39 @@ import Users from "./Resources/Users.json";
 import ProgrammerJokes from "./ProgrammerJokes";
 import RandomRobo from "./RandomRobo";
 import SearchRobo2 from "./SearchRobo2";
-import Accordian from "./Accodian";
+import Accordian from "../src/components/Accordian";
 
-export default function App() {
+import AccordionData from "./Resources/AccordianData";
+
+import Slider from "./components/Slider";
+
+function App() {
   const showAlert = () => {
     alert("You have clicked button");
   };
 
   const showAlert_m = (num) => {
-    alert(`you have clicked + ${num} ` );
+    alert(`you have clicked + ${num} `);
   };
   return (
     <div className="App">
-     
+      <div>
+        <Slider />
+      </div>
       <h1>Hello React</h1>
-      <h2>Hello World!</h2>
-      <Accordian/>
+      <h1>Hello World!</h1>
+      <div>
+        <Accordian name="FAQ" />
+        {AccordionData.map((adata) => (
+          <div>
+            <Accordian title={adata.title} content={adata.content} />
+          </div>
+        ))}
+
+        {/*      
+       <Accordian name="FAQ App" title={AccordianData.map((adata)=>return( {adata.title})) }   content="" />*/}
+      </div>
+
       <SearchRobo2 />
 
       <button className="button-1" onClick={showAlert}>
@@ -34,9 +51,8 @@ export default function App() {
         Alert{" "}
       </button>
       <div className="cButton">
-        <Button onClick={()=>showAlert_m("button-1")} name="button-1">
+        <Button onClick={() => showAlert_m("button-1")} name="button-1">
           {"button-1"}
-       
         </Button>
         <Button onClick={showAlert_m}>button-2</Button>
         <Button onClick={showAlert_m} name="button-3">
@@ -77,3 +93,4 @@ export default function App() {
     </div>
   );
 }
+export default App;
