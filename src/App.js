@@ -12,10 +12,15 @@ import ProgrammerJokes from "./ProgrammerJokes";
 import RandomRobo from "./RandomRobo";
 import SearchRobo2 from "./SearchRobo2";
 import Accordian from "../src/components/Accordian";
-
 import AccordionData from "./Resources/AccordianData";
-
 import Slider from "./components/Slider";
+
+import Layout from "./Layout";
+import NoPage from "./NoPage";
+import userComment from "./userComment";
+import userForm from "./userForm";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const showAlert = () => {
@@ -27,6 +32,16 @@ function App() {
   };
   return (
     <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<RandomRobo />} />
+            <Route path="programmeerJokes" element={<ProgrammerJokes />} />
+            <Route path="userComment" element={<userComment />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
       <div>
         <Slider />
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function UForm(prop) {
+function userForm(prop) {
   const [inputValue, setInputValue] = useState("");
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -32,4 +32,4 @@ function UForm(prop) {
     </div>
   );
 }
-export default UForm;
+export default userForm;

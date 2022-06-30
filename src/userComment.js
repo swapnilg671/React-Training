@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function formatDate(date) {
+function userComment(date) {
   return date.toLocaleDateString();
 }
 
@@ -17,7 +17,7 @@ function Comment(props) {
         <div className="UserInfo-name">{props.author.name}</div>
       </div>
       <div className="Comment-text">{props.text}</div>
-      <div className="Comment-date">{formatDate(props.date)}</div>
+      <div className="Comment-date">{userComment(props.date)}</div>
     </div>
   );
 }
@@ -35,3 +35,4 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Comment date={comment.date} text={comment.text} author={comment.author} />
 );
+export default userComment;
